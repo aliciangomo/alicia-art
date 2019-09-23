@@ -1,2 +1,60 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="dashboardbanner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2215&q=80;">
+  <div class="container">
+    <%= image_tag( "IMG_4565.jpg", class: "main-avatar") %>
+    <div class="container-text">
+      <h1>Original artwork for sale or rent</h1>
+      <p>Explore my paintings</p>
+    </div>
+  </div>
+</div>
+
+<div class="artist-statement">
+  <h1 class="main-subtitle"> A Nomad Artist </h1>
+  <div class="about-me">
+
+  </div>
+  <div class="about-my-work">
+
+  </div>
+</div>
+
+<div class="my-portfolio">
+  <h1 class="main-subtitle"> My artwork - Shop </h1>
+  <div class="category-cards">
+
+    <div class="category-card">
+      <%= link_to paintings_path  do %>
+        <%= image_tag ("IMG_4565.jpg")%>
+        <div class="category-text">
+          <h3>Abstract</h3>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="category-card">
+      <%= link_to paintings_path  do %>
+        <%= image_tag ("IMG_4565.jpg")%>
+        <div class="category-text">
+          <h3>Figurative</h3>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="category-card">
+      <%= link_to paintings_path  do %>
+        <%= image_tag ("IMG_4565.jpg")%>
+        <div class="category-text">
+          <h3>Travel</h3>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="contact">
+  <h1 class="main-subtitle"> Send me a message </h1>
+  <button class="button-primary">Contact me</button>
+
+</div>
