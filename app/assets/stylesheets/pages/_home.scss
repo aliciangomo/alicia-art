@@ -9,10 +9,43 @@
 
 .artist-statement {
   margin-top: 57px;
-  min-height: 200px;
+  min-height: 300px;
 
 }
 
+
+.about-me {
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-tems: center;
+}
+
+.about-me img {
+  width: 40%;
+  object-fit: cover;
+}
+.about-me p {
+  width: 60%;
+
+}
+
+
+.about-my-work {
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-tems: center;
+}
+
+.about-my-work img {
+  object-fit: cover;
+  width: 40%;
+}
+
+.about-my-work p {
+
+}
 
 .my-portfolio {
   margin-top: 57px;
