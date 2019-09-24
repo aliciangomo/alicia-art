@@ -1,0 +1,88 @@
+
+<div class="index-intro">
+  <p class="main-text">
+  As a self represented artist I offer my work for purchase directly from my studio.
+  </p>
+
+  <p class="main-text">
+  For all purchases via my site you get a <strong>FREE WORLDWIDE SHIPPING</strong> and a <strong>30 DAYS MONEY-BACK GUARANTEE</strong>.
+  </p>
+
+  <p class="main-text">
+  All orders are shipped within 5 days. Please, consider my refund policy in the footnote of this page.
+  </p>
+</div>
+
+
+<div class="category-cards">
+
+  <div class="category-card">
+      <%= image_tag ("1492117_496489527132881_385370940_o.jpg")%>
+      <div class="category-text">
+        <h3>Abstract</h3>
+      </div>
+  </div>
+
+  <div class="category-card">
+      <%= image_tag ("IEEL8748.jpg")%>
+      <div class="category-text">
+        <h3>Figurative</h3>
+      </div>
+  </div>
+
+  <div class="category-card">
+      <%= image_tag ("PZUW9578.jpg")%>
+      <div class="category-text">
+        <h3>Other</h3>
+      </div>
+  </div>
+
+</div>
+
+<div class="abstract-paintings d-none">
+  <%= @paintings_abstract.each do |painting| %>
+    <div class="card-painting">
+      <%= image_tag ("IEEL8748.jpg")%>
+      <div class="card-painting-infos">
+        <div>
+          <h2><%= painting.name %></h2>
+          <p><%= painting.description %></p>
+          <p><%= painting.height %> x <%= painting.width %>, <%= painting.year %>.</p>
+        </div>
+        <h2 class="card-painting-pricing"><%= painting.price %></h2>
+      </div>
+    </div>
+    <% end %>
+</div>
+
+<div class="figurative-paintings d-none">
+  <%= @paintings_figurative.each do |fig_painting| %>
+    <div class="card-painting">
+      <%= image_tag ("IEEL8748.jpg")%>
+      <div class="card-painting-infos">
+        <div>
+          <h2><%= fig_painting.name %></h2>
+          <p><%= fig_painting.description %></p>
+          <p><%= fig_painting.height %> x <%= fig_painting.width %>, <%= fig_painting.year %>.</p>
+        </div>
+        <h2 class="card-painting-pricing"><%= fig_painting.price %></h2>
+      </div>
+    </div>
+    <% end %>
+</div>
+
+<div class="other-paintings d-none">
+  <%= @paintings_other.each do |other_painting| %>
+    <div class="card-painting">
+      <%= image_tag ("IEEL8748.jpg")%>
+      <div class="card-painting-infos">
+        <div>
+          <h2><%= other_painting.name %></h2>
+          <p><%= other_painting.description %></p>
+          <p><%= other_painting.height %> x <%= other_painting.width %>, <%= other_painting.year %>.</p>
+        </div>
+        <h2 class="card-painting-pricing"><%= other_painting.price %></h2>
+      </div>
+    </div>
+    <% end %>
+</div>
