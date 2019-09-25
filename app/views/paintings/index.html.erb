@@ -39,10 +39,12 @@
 
 </div>
 
-<div class="abstract-paintings d-none">
+<div class="abstract-paintings">
+ <!--  <h3>ABSTRACT</h3> -->
   <%= @paintings_abstract.each do |painting| %>
     <div class="card-painting">
-      <%= image_tag ("IEEL8748.jpg")%>
+      <%#= painting.photo%>
+      <%= cl_image_tag painting.photo, crop: :fill %>
       <div class="card-painting-infos">
         <div>
           <h2><%= painting.name %></h2>
@@ -55,10 +57,12 @@
     <% end %>
 </div>
 
-<div class="figurative-paintings d-none">
+<div class="figurative-paintings">
+<!--   <h3>FIGURATIVE</h3> -->
   <%= @paintings_figurative.each do |fig_painting| %>
     <div class="card-painting">
-      <%= image_tag ("IEEL8748.jpg")%>
+      <%= cl_image_tag fig_painting.photo%>
+      <%#= cl_image_tag fig_painting.photo, crop: :fill %>
       <div class="card-painting-infos">
         <div>
           <h2><%= fig_painting.name %></h2>
@@ -71,10 +75,12 @@
     <% end %>
 </div>
 
-<div class="other-paintings d-none">
+<div class="other-paintings">
+<!--   <h3>OTHER</h3> -->
   <%= @paintings_other.each do |other_painting| %>
     <div class="card-painting">
-      <%= image_tag ("IEEL8748.jpg")%>
+      <%= cl_image_tag other_painting.photo%>
+      <%#= cl_image_tag other_painting.photo, crop: :fill %>
       <div class="card-painting-infos">
         <div>
           <h2><%= other_painting.name %></h2>
