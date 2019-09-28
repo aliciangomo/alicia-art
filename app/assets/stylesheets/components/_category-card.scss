@@ -1,11 +1,11 @@
 .category-cards {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-gap: 7vw;
-margin-right: 5vw;
-margin-left: 5vw;
-height: 40vh;
-margin-bottom: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  height: 40vh;
+  margin-bottom: 10vh;
 }
 
   @media (max-width: 768px) {

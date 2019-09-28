@@ -5,6 +5,7 @@ class PaintingsController < ApplicationController
     @paintings_abstract = Painting.all.where("category = ?", "Abstract")
     @paintings_figurative = Painting.all.where("category = ?", "Figurative")
     @paintings_other = Painting.all.where("category = ?", "Other")
+    @paintings = Painting.all
   end
 
   private

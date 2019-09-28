@@ -78,4 +78,38 @@ painting6 = Painting.new(name: "Bla bla",
   photo: "IMG_0141.jpg")
 painting6.save!
 
+painting7 = Painting.new(name: "Bla",
+  description: "An abstract painting full of geometry",
+  year: 2019,
+  price: 1000,
+  height: 30,
+  width: 40,
+  category: 'Abstract',
+  material: "oil",
+  photo: "IMG_0329.jpg")
+painting7.save!
+
+painting8 = Painting.new(name: "Yellow",
+  description: "An abstract painting full of geometry",
+  year: 2017,
+  price: 1000,
+  height: 30,
+  width: 40,
+  category: 'Figurative',
+  material: "acrylic",
+  photo: "IMG_1786.jpg")
+painting8.save!
+
+painting9 = Painting.new(name: "Bla bla",
+  description: "An abstract painting full of geometry",
+  year: 2018,
+  price: 700,
+  height: 60,
+  width: 60,
+  category: 'Other',
+  material: "oil",
+  photo: "IMG_0141.jpg")
+painting9.save!
+
+
 puts "Paintings created"
