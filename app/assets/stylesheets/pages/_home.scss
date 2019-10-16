@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .main-subtitle {
-  font-size: 24px;
+  font-size: 28px;
   color: $purple;
   font-weight: bold;
   text-align: center;
@@ -28,18 +28,30 @@
 
 
 .about-me {
-  height: 50vh;
-  display: flex;
-  justify-content: space-between;
-  align-tems: center;
+  // height: 50vh;
+  // display: flex;
+  // justify-content: space-between;
+  // align-tems: center;
   margin: 7vh 5vw;
 }
 
 .about-me p {
   width: 100%;
-
+  text-align: left;
 }
 
+
+#music {
+  color: $black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#love {
+  color: $black;
+  font-weight: 700;
+  font-size: 20px;
+}
 
 .about-my-work {
   max-width: 100%;
@@ -65,8 +77,11 @@
 
 
 .contact {
-  margin-top: 57px;
+  margin-top: 5vh;
   text-align: center;
   min-height: 200px;
+}
 
+.button-contact {
+  width: 20vw;
 }

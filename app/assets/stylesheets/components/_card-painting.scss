@@ -1,6 +1,6 @@
 .abstract-paintings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 7vw;
   margin-right: 5vw;
   margin-left: 5vw;
@@ -23,7 +23,7 @@
 
 .figurative-paintings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 7vw;
   margin-right: 5vw;
   margin-left: 5vw;
@@ -45,10 +45,33 @@
     }
   }
 
+.portrait-paintings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  // height: 55vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+  @media (max-width: 768px) {
+    .other-paintings {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .portrait-paintings {
+      grid-template-columns: 1fr;
+    }
+  }
+
 
 .other-paintings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 7vw;
   margin-right: 5vw;
   margin-left: 5vw;

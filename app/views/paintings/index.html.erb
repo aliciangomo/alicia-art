@@ -24,23 +24,30 @@
   </div> -->
 
   <div class="category-card abstractcat">
-      <%= image_tag ("1492117_496489527132881_385370940_o.jpg")%>
+      <%= image_tag ("Forever-now-2015.jpg")%>
       <div class="category-text">
-        <h3>Abstract</h3>
+        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Abstract</h3>
       </div>
   </div>
 
   <div class="category-card figurativecat">
-      <%= image_tag ("IEEL8748.jpg")%>
+      <%= image_tag ("Father-and-son-2017.jpg")%>
       <div class="category-text">
-        <h3>Figurative</h3>
+        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Figurative</h3>
+      </div>
+  </div>
+
+  <div class="category-card portraitcat">
+      <%= image_tag ("Alex-2014.jpg")%>
+      <div class="category-text">
+        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Portrait</h3>
       </div>
   </div>
 
   <div class="category-card othercat">
-      <%= image_tag ("PZUW9578.jpg")%>
+      <%= image_tag ("Break-of-dawn-2017.jpg")%>
       <div class="category-text">
-        <h3>Other</h3>
+        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Other</h3>
       </div>
   </div>
 
@@ -72,7 +79,7 @@
   <% @paintings_abstract.each do |abs_painting| %>
     <div class="card-painting">
       <%#= painting.photo%>
-      <%= image_tag("Red_rhapsody.jpg") %>
+      <%= image_tag("Alex-2014.jpg") %>
       <div class="card-painting-infos">
         <div>
           <h3><%= abs_painting.name %></h3>
@@ -92,7 +99,7 @@
 <!--   <h3>FIGURATIVE</h3> -->
   <% @paintings_figurative.each do |fig_painting| %>
     <div class="card-painting">
-      <%= image_tag("Red_rhapsody.jpg") %>
+      <%= image_tag("Alex-2014.jpg") %>
       <%#= cl_image_tag fig_painting.photo, crop: :fill %>
       <div class="card-painting-infos">
         <div>
@@ -108,12 +115,32 @@
 </div>
 
 
+<div class="portrait-paintings">
+<% if @paintings_portrait %>
+<!--   <h3>OTHER</h3> -->
+  <% @paintings_portrait.each do |portrait_painting| %>
+    <div class="card-painting">
+      <%= image_tag("Alex-2014.jpg") %>
+      <%#= cl_image_tag other_painting.photo, crop: :fill %>
+      <div class="card-painting-infos">
+        <div>
+          <h3><%= portrait_painting.name %></h3>
+          <p><%= portrait_painting.description %></p>
+          <p><%= portrait_painting.height %>cm x <%= portrait_painting.width %>cm, <%= portrait_painting.year %>.</p>
+        </div>
+        <h2 class="card-painting-pricing"><%= portrait_painting.price %></h2>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+
 <div class="other-paintings">
 <% if @paintings_other %>
 <!--   <h3>OTHER</h3> -->
   <% @paintings_other.each do |other_painting| %>
     <div class="card-painting">
-      <%= image_tag("Red_rhapsody.jpg") %>
+      <%= image_tag("Alex-2014.jpg") %>
       <%#= cl_image_tag other_painting.photo, crop: :fill %>
       <div class="card-painting-infos">
         <div>
