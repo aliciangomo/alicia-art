@@ -114,7 +114,7 @@ painting9 = Painting.new(name: "La suplica (o la proposicion",
 painting9.save!
 
 painting10 = Painting.new(name: "Under the rain",
-  description: "Background song "Mientes tan bien" (Sin bandera) http://youtu.be/tg7QRlINFgQ",
+  description: "Background song 'Mientes tan bien' (Sin bandera) http://youtu.be/tg7QRlINFgQ",
   year: 2015,
   price: 500,
   height: 40,
@@ -125,7 +125,7 @@ painting10 = Painting.new(name: "Under the rain",
 painting10.save!
 
 painting11 = Painting.new(name: "Andalusian woman",
-  description: "Women series. Based on the song "Aire al alma" by Alejandro Sanz",
+  description: "Women series. Based on the song 'Aire al alma' by Alejandro Sanz",
   year: 2009,
   price: 500,
   height: 70,
