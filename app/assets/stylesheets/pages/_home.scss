@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .main-subtitle {
-  font-size: 28px;
+  font-size: 32px;
   color: $purple;
   font-weight: bold;
   text-align: center;
@@ -9,7 +9,7 @@
 
 .main-text {
   color: $dark-gray;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -86,4 +86,9 @@
 .button-contact {
   width: 20vw;
   margin-bottom: 5vh;
+}
+
+.button-contact a :hover :active{
+  background-color: $purple;
+  color: $white;
 }

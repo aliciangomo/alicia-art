@@ -1,5 +1,5 @@
 class PaintingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!
 
   def index
     @paintings_abstract = Painting.all.where("category = ?", "Abstract")

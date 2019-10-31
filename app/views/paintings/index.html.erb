@@ -79,7 +79,7 @@
   <% @paintings_abstract.each do |abs_painting| %>
     <div class="card-painting">
       <%#= image_tag("Alex-2014.jpg") %>
-      <%= image_tag(abs_painting.photo) unless abs_painting.photo.nil? %>
+      <%= image_tag abs_painting.photo unless abs_painting.photo.nil?%>
       <div class="card-painting-infos">
         <div>
           <h3><%= abs_painting.name %></h3>

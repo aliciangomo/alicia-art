@@ -1,0 +1,27 @@
+.modal-title {
+ color: $purple;
+}
+
+.modal-body {
+  color: $dark-gray;
+  font-size: 18px;
+}
+
+#submit-btn {
+  background-color: $purple;
+  border-color:  $purple;
+  color: $white;
+  font-weight: 500;
+}
+
+#close-btn {
+  color: $dark-gray;
+  background-color: $white;
+  font-size: 18px;
+}
+
+#close-btn :hover, :active {
+  color: $dark-gray;
+  background-color: $white;
+  font-size: 18px;
+}

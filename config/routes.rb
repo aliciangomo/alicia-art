@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'contact/new'
   devise_for :users
 
   get "dashboard", to: 'pages#dashboard', as: "dashboard"
-
+  post "/contact", to: 'pages#path', as: "contact"
   root to: 'pages#home'
 
   resources :paintings do

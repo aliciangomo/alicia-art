@@ -20,7 +20,7 @@ painting1 = Painting.new(name: "Rapsody in red",
   width: 50,
   category: 'Abstract',
   material: "Oil",
-  photo: "Rapsody-in-red-2014.jpg")
+  photo: "Rapsody-in-red-2014-1.jpg")
 painting1.save!
 
 painting2 = Painting.new(name: "Bloody love",
