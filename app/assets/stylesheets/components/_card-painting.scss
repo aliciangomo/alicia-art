@@ -1,0 +1,150 @@
+.abstract-paintings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  // height: 55vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+  @media (max-width: 768px) {
+    .abstract-paintings {
+      grid-template-columns: 1fr 1fr ;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .abstract-paintings {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.figurative-paintings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  // height: 55vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+
+}
+
+  @media (max-width: 768px) {
+    .figurative-paintings {
+      grid-template-columns: 1fr 1fr ;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .figurative-paintings {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.portrait-paintings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  // height: 55vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+  @media (max-width: 768px) {
+    .other-paintings {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .portrait-paintings {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+.other-paintings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  // height: 55vh;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+  @media (max-width: 768px) {
+    .other-paintings {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .other-paintings {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.card-painting {
+  display:block;
+  border-radius: 0px;
+  overflow: hidden;
+  background: $light-gray;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  // padding: 0vh auto;
+  // max-height: 50vh;
+}
+
+.card-painting > img {
+  object-fit: cover;
+  max-width: 100%;
+  margin: 0vh auto;
+}
+
+.card-painting h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  // padding-right: 1vw;
+  color: $dark-gray;
+}
+
+.card-painting p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  text-align: left;
+  padding-right: 1vw;
+  color: $dark-gray;
+}
+
+.card-painting .card-painting-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  // bottom: 0px;
+}
+
+h2.card-painting-pricing {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: $dark-gray;
+}
+
+.index-intro {
+  margin: 7vh 5vw;
+}

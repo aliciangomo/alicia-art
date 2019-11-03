@@ -1,0 +1,23 @@
+<div class="contact-container">
+
+  <h1 class="main-subtitle">Contact me</h1>
+  <br>
+
+  <div class="contact-content">
+      <div class="form">
+      <p class="main-text">Send me an email</p>
+        <%= form_tag contacts_path do%>
+          Name: </br><%= text_field_tag 'name', '', class: "form-control" %></br>
+          Email : </br><%= text_field_tag 'email','', class: "form-control" %></br>
+          Message:<%= text_area_tag 'message', '', class: "form-control"%>
+          <br>
+          <%= submit_tag "Submit",:value => "submit", :class => "btn button-primary" %>
+        <%end%>
+      </div>
+
+      <div class="contact-image">
+        <%#= image_tag("Studio28.jpg", id: "contact-image") %>
+      </div>
+  </div>
+
+</div>
