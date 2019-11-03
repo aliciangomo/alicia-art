@@ -1,10 +1,11 @@
 .category-cards {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-gap: 30px;
-margin-right: 5vw;
-margin-left: 5vw;
-height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  height: 39vh;
+  margin-bottom: 10vh;
 }
 
   @media (max-width: 768px) {
@@ -21,34 +22,46 @@ height: 60vh;
 
 
 .category-card {
-border-radius: 7px;
+display: block;
+border-radius: 5px;
 overflow: hidden;
-background: white;
+background: $light-gray;
 box-shadow: 0 0 15px rgba(0,0,0,0.2);
-position: relative;
+// position: relative;
+text-align: center;
+padding: 5vh auto;
 }
 
 .category-card img {
-width: 100%;
-object-fit: cover;
-height: 50vh;
+height: 50%;
+object-fit: contain;
+height: 25vh;
+margin: 2vh auto;
 }
 
 .category-text {
 border-radius: 2px;
-background-color: $white;
+background-color: $purple;
 opacity: 0.9;
 height: 10vh;
-position: absolute;
-bottom: 0;
+// position: absolute;
+// bottom: 0;
 width: 100%;
+padding: 3vh;
 }
 
 .category-text h3 {
-font-size: 24px;
-font-weight: 700;
-color: $black;
+font-size: 18px;
+font-weight: 500;
+color: $white;
 text-align: center;
-margin-top: 2vh;
+// margin: auto auto;
 }
 
+.category-text h3 i{
+font-size: 20px;
+font-weight: 700;
+color: $white;
+text-align: center;
+// margin: auto auto;
+}
