@@ -83,7 +83,9 @@
     Please send me a message if interested in a commission or if you have any questions about my art!
   </p>
   <br>
-  <button class="button-primary button-contact"><%= link_to 'Get in touch!', contact_path, { :class => "nav-link", 'data-toggle' => 'modal', 'data-target' => '#contact-modal'} %></button>
+  <div id="button-contact">
+  <%= link_to 'Get in touch!', new_contact_path, { :class => "button-primary button-contact nav-link", 'data-toggle' => 'modal', 'data-target' => '#contact-modal'} %>
+  </div>
 </div>
 
-<%= render "pages/contact" %>
+<%= render "contacts/new" %>

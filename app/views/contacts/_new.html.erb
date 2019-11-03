@@ -8,14 +8,15 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= form_tag '/contact' do%>
+        <%= form_tag contacts_path do%>
+          Name: </br><%= text_field_tag 'name', '', class: "form-control" %></br>
           Email : </br><%= text_field_tag 'email','', class: "form-control" %></br>
-          Subject: </br><%= text_field_tag 'subject', '', class: "form-control" %></br>
-          Body:<%= text_area_tag 'body', '', class: "form-control"%>
+          Message:<%= text_area_tag 'message', '', class: "form-control"%>
           <br>
-          <%= submit_tag "submit",:value => "submit", :class => "btn button-primary" %>
+          <%= submit_tag "Submit",:value => "submit", :class => "btn button-primary" %>
         <%end%>
       </div>
     </div>
   </div>
 </div>
+

@@ -1,34 +1,115 @@
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.inspiration-container {
+  margin: 7vh 5vw;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+// Picture mosaic
+
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 0 4px;
+//   margin-top: 50px;
+//   justify-content: space-around;
+// }
+
+// /* Create four equal columns that sits next to each other */
+// .column {
+//   flex: 25%;
+//   max-width: 20%;
+//   padding: 0 4px;
+// }
+
+// .column img {
+//   margin-top: 8px;
+//   vertical-align: middle;
+//   width: 100%;
+// }
+.collage-container {
+  background-color: $white;
+  padding: 2vh 2vw;
+  margin-top: 7vh;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+.collage {
+  background-image: url("banner-background.jpg");
+  border-width: 10px;
+  text-align: center;
   width: 100%;
+  padding: 2vh;
+}
+
+.collage-photo {
+  width: 20%;
+  padding:1px;
+  border:10px solid $white;
+}
+
+#photo-1 {
+  transform: rotate(13deg);
+}
+
+#photo-2 {
+  transform: rotate(-15deg);
+}
+#photo-3 {
+
+}
+#photo-4 {
+  transform: rotate(-10deg);
+
+}
+
+#photo-5 {
+
+}
+
+#photo-6 {
+  transform: rotate(40deg);
+
+}
+
+#photo-7 {
+
+}
+
+#photo-8 {
+  transform: rotate(-45deg);
+
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
+@media screen and (max-width: 1200px) {
+  .collage-photo {
+    width: 50%;
+    max-width: 35%;
+  }
+  .collage {
+    overflow: hidden;
+    // max-height: 50vh;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 950px) {
+  .collage-photo {
+    width: 75%;
+    max-width: 45%;
+    margin: 0
+  }
+  .collage {
+    overflow: hidden;
     max-width: 50%;
   }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
+  .collage-photo {
+    width: 50%;
+    max-width: 45%;
+    margin: 0;
+  }
+  .collage {
+    overflow: hidden;
   }
 }

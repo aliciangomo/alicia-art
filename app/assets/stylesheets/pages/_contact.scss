@@ -20,8 +20,71 @@
   font-size: 18px;
 }
 
-#close-btn :hover, :active {
+#close-btn :hover {
   color: $dark-gray;
   background-color: $white;
   font-size: 18px;
+}
+
+.contact-container {
+  margin: 5vw 7vh;
+}
+
+.contact-content {
+  display: flex;
+}
+
+.form {
+  width: 50%;
+  max-width: 50%;
+  padding: 2vh 2vw;
+}
+
+.contact-image {
+  width: 50%;
+  max-width: 50%;
+  padding: 2vh 2vw;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url(Studio28.jpg);
+  border: 10px $white solid;
+  margin-left: 5vw;
+}
+
+// .contact-image img {
+//   width: 100%;
+//   object-fit: fill;
+// }
+
+
+
+
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
 }

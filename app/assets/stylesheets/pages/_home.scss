@@ -66,6 +66,7 @@
 
 .about-my-work img {
   object-fit: cover;
+  overflow: scroll;
   width: auto;
   height: 100%;
   border-radius: 6px;
@@ -86,6 +87,11 @@
 .button-contact {
   width: 20vw;
   margin-bottom: 5vh;
+}
+
+#button-contact {
+  display: flex;
+  justify-content: center;
 }
 
 .button-contact a :hover :active{
