@@ -1,10 +1,10 @@
 .category-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 7vw;
+  grid-gap: 4vw;
   margin-right: 5vw;
   margin-left: 5vw;
-  height: 39vh;
+  // height: 39vh;
   margin-bottom: 10vh;
 }
 
@@ -32,12 +32,12 @@ text-align: center;
 padding: 5vh auto;
 }
 
-.category-card img {
-height: 50%;
-object-fit: contain;
-height: 25vh;
-margin: 2vh auto;
-}
+// .category-card img {
+// height: 50%;
+// object-fit: contain;
+// height: 25vh;
+// margin: 2vh auto;
+// }
 
 .category-text {
 border-radius: 2px;

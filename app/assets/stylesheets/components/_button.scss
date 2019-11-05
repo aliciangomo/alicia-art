@@ -1,7 +1,7 @@
 .button-primary {
   border-radius: 5px;
   height: 50px;
-  weight: 334px;
+  // width: 334px;
   background-color: $purple;
   color: $white;
   font-weight: 400;
@@ -13,4 +13,21 @@
   color: $white;
   background-color: $purple;
   font-weight: 700;
+}
+
+
+
+.button-secondary {
+  border-radius: 5px;
+  height: 50px;
+  // width: 334px;
+  background-color: $light-gray;
+  color: #3e403f;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: $body-font;
+}
+
+.button-secondary :hover {
+  border-color: $purple;
 }

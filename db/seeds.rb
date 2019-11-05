@@ -42,7 +42,7 @@ painting3 = Painting.new(name: "Irene and baby",
   width: 60,
   category: 'Other',
   material: "oil",
-  photo: "IMG_5019.jpg")
+  photo: "Irene-and-valerio-2014.jpg")
 painting3.save!
 
 painting4 = Painting.new(name: "Eternity",
@@ -110,7 +110,7 @@ painting9 = Painting.new(name: "La suplica (o la proposicion",
   width: 60,
   category: 'Abstract',
   material: "Acrylic on canvas",
-  photo: "IMG_0141.jpg")
+  photo: "La-suplica-2017.jpg")
 painting9.save!
 
 painting10 = Painting.new(name: "Under the rain",
@@ -189,7 +189,7 @@ painting16 = Painting.new(name: "Abstract 5",
   width: 30,
   category: 'Abstract',
   material: "Mixed media on canvas paper",
-  photo: "Abstrat-5.-2014jpg")
+  photo: "Abstract-study-5-2014.jpg")
 painting16.save!
 
 painting17 = Painting.new(name: "Colour Rapshody",

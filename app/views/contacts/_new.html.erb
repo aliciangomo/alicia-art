@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel">Your message for Alicia</h4>
-        <button id="close-btn" type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -13,7 +13,7 @@
           Email : </br><%= text_field_tag 'email','', class: "form-control" %></br>
           Message:<%= text_area_tag 'message', '', class: "form-control"%>
           <br>
-          <%= submit_tag "Submit",:value => "submit", :class => "btn button-primary" %>
+          <%= submit_tag "Submit",:value => "Submit", :class => "btn button-primary" %>
         <%end%>
       </div>
     </div>

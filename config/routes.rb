@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
 
 
-
   get "contact", to: 'pages#contact', as: "contact"
   get "inspiration", to: 'pages#inspiration', as: "inspiration"
+
+  get "privacy", to: 'pages#privacy', as: "privacy"
+  get "returnpolicy", to: 'pages#returnpolicy', as: "returnpolicy"
+  get "sitemap", to: 'pages#sitemap', as: "sitemap"
 
   root to: 'pages#home'
 

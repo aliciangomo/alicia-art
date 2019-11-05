@@ -1,0 +1,52 @@
+<div class="show-container">
+
+<%= link_to 'Back to Shop', paintings_path %>
+<br>
+  <div class="row justify-content-center painting-details ">
+      <div class="col-lg-8 col-md-8 col-sm-12 painting-carrousel">
+        <%= image_tag @painting.photo%>
+        <%#= render 'photocarousel', photos: @painting.photos %>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 painting-infos">
+        <h2>"<%= @painting.name.capitalize %>"</h2>, <span class="main-text"><%= @painting.year %></span>
+        <hr>
+        <p class="main-text"><strong>Style: </strong><%= @painting.category %></p>
+        <p class="main-text"><strong>Measurements:</strong> <%= @painting.height %>cm x <%= @painting.width %>cm</p>
+        <p class="main-text"><strong>Description:</strong> <%= @painting.description %></p>
+
+        <%= form_for([@painting]) do |f| %>
+        <%= f.hidden_field :painting_id, value: @painting.id %>
+        <%= f.submit "Add to bag", :id => "show-form-button", :class => "button-primary" %>
+        <% end %>
+      </div>
+  </div>
+
+
+  <div class="row justify-content-center painting-reviews">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <p class="reviews-title"><strong>Comments</strong></p>
+      <hr>
+      <!-- <p class="reviews-statement">What do you think of <%#= @painting.name %>?</p> -->
+
+      <% if @painting.reviews.count != 0 %>
+          <div id="reviews">
+            <% @painting.reviews.each do |review| %>
+            <p class="main-text"> "<%= review.content %>"</p>
+            <% end %>
+          </div>
+      <% else %>
+          <div >
+            <p class="main-text">It looks like "<%= @painting.name %>" doesn't have any comments yet...</p>
+            <p class="main-text">Feel free to add one.</p>
+          </div>
+      <% end %>
+
+      <button class="button-secondary"><%= link_to 'Leave a comment', new_painting_review_path(@painting), { :class => "button-secondary", 'data-toggle' => 'modal', 'data-target' => '#new-review-modal' } %></button>
+
+      <%= render "reviews/new", review: @review, painting: @painting %>
+    </div>
+
+  </div>
+
+</div>

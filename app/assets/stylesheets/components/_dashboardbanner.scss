@@ -1,19 +1,24 @@
 // For the "Hero" on the dashboard
 .dashboardbanner {
-  background-size: cover;
-  background-position: bottom;
-  // padding: 25px 0;
-  // height: 135px;
-  // height: 23vh;
-  padding-top: 1em;
+  background-size: 100%;
+  background-image: url(Studio16.jpg);
+  background-position: 0% 60%;
+  padding-top: 0;
   padding-bottom: 1em;
-  // position: sticky;
-  top: 57px;
-  // z-index: 50;
-  height: 320px;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.dashboardbanner h2 {
+.container-text {
+  padding: 1vh 1vw 1vh 3vw;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient( #005, $purple);
+}
+
+.container-text h2 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -21,7 +26,7 @@
   font-weight: bold;
 }
 
-.dashboardbanner h1 {
+.container-text h1 {
   font-size: 24px;
   color: white;
   opacity: .7;
@@ -29,21 +34,18 @@
   padding: 0;
 }
 
-.dashboardbanner .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: 2em;
-  margin-left: 2em;
-}
+// .container-text .container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: 100%;
+//   padding-right: 5px;
+//   padding-left: 5px;
+//   margin-right: 2em;
+//   margin-left: 2em;
+// }
 
 
-.container-text {
-  margin-left: 50px;
-}
 // For the Pill/Tab bar to view user content
 .nav-pills {
   padding-left: 40px;

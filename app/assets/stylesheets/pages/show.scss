@@ -1,0 +1,99 @@
+.show-container {
+  margin: 5vw 7vh;
+}
+
+.painting-details {
+  // width: 100%;
+  // display: flex;
+  // justify-content: space-around;
+  padding: 2vh 2vh;
+  background-color: white;
+}
+
+.painting-carrousel {
+  // width: 70%;
+  max-height: 70vh;
+  height: content-fit;
+}
+
+.painting-carrousel img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 2vh 2vw;
+  background-color: white;
+}
+
+.painting-infos {
+  // width: 30%;
+  max-height: 100%;
+  padding: 2vh 2vw;
+  position: relative;
+}
+
+.painting-infos h2 {
+  font-size: 28px;
+  color: $purple;
+}
+
+.painting-infos p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #3e403f;
+}
+
+
+//FORM
+
+#show-form-button {
+  width: 100%;
+}
+
+//REVIEWS
+
+.painting-reviews {
+  // width: 100%;
+  // display: flex;
+  // justify-content: space-between;
+  padding: 2vw 2vh;
+  background-color: $white;
+  margin-top: 2vh;
+}
+
+.reviews-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #3e403f;
+}
+
+.review-content {
+  font-size: 18px;
+  color: #3e403f;
+}
+
+#reviews {
+  padding: 2vh 2vw;
+}
+
+
+@media screen and (max-width: 950px) {
+     .button-secondary {
+      width: 150px;
+      height: 50px;
+     }
+  }
+
+
+  @media screen and (max-width: 700px) {
+   .button-secondary {
+      width: 150px;
+      height: 50px;
+   }
+ }
+
+  @media screen and (max-width: 500px) {
+     .button-secondary {
+      width: 100%;
+      height: 50px;
+     }
+  }
+

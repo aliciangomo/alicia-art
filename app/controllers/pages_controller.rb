@@ -10,6 +10,15 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def privacy
+  end
+
+  def returnpolicy
+  end
+
+  def sitemap
+  end
+
   # def new
   #   @contact = Contact.new
   # end
