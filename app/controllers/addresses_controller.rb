@@ -17,11 +17,9 @@ class AddressesController < ApplicationController
   private
 
   def address_params
-    params.require(:address).permit(:billing_address, :billing_country, :billing_zipcode, :billing_city)
+    params.require(:address).permit(:billing_address, :billing_country, :billing_zipcode, :billing_city, :different_shipping)
   end
-
 end
-
 
 # respond_to do |format|
 #         format.html { new_painting_order_path(@painting) }

@@ -13,7 +13,7 @@
     <script src="https://js.stripe.com/v3/"></script>
   </head>
 
-  <body>
+  <body class="<%=params[:controller]%><%= params[:action] %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <div style="min-height: calc(100vh - 130px)">

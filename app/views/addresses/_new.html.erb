@@ -2,12 +2,25 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Billing address</h4>
-        <button type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+        <h4 class="modal-title purple-title" id="exampleModalLabel">Please enter your billing address</h4>
+        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <p class="main-text">You want to buy:</p>
+        <hr>
+        <div class="painting-order">
+            <p class="grey-title">Painting</p>
+            <p class="grey-title">Name</p>
+            <p class="grey-title">Price</p>
+
+            <%= image_tag @painting.photo, class: "thumbnail" %>
+            <p class="main-text"><strong> "<%= @painting.name %>"</strong>, <%= @painting.year %></p>
+            <p class="main-text"><%= humanized_money_with_symbol @painting.price %></p>
+        </div>
+        <hr>
+
         <div class="billing-details form-group">
               <%= form_for @address, :url => addresses_path do |f| %>
                 <%= f.hidden_field :painting_id, :value => @painting.id %>
@@ -37,7 +50,7 @@
                 <%= f.label :different_shipping, "This is also my shipping address", {class: "checkbox inline"} %>
                 </div>
 
-                <%= f.submit :submit, value: "Save address", id: "submit-address", class: "button-primary w-100" %>
+                <%= f.submit :"Save address", id: "submit-btn", class: "button-primary w-100" %>
               <% end %>
 
           </div>

@@ -12,8 +12,8 @@ window.addEventListener('load', (event) => {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Enter your shipping information address</h4>
-        <button type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+        <h4 class="modal-title purple-title" id="exampleModalLabel"> Where shall I ship your painting? </h4>
+        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -30,7 +30,7 @@ window.addEventListener('load', (event) => {
               <%= f.text_field :shipping_comments, id: "shipping_comments", placeholder: "Any shipping instructions?", class: 'form-control'%><br>
               </div>
 
-              <%= f.submit :submit, value: "Save address", id: "submit-address", class: "button-primary" %>
+              <%= f.submit :"Save shipping address", id: "submit-btn", class: "button-primary" %>
             <% end %>
         </div>
 

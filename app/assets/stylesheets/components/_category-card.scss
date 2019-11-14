@@ -21,16 +21,16 @@
   }
 
 
-.category-card {
-display: block;
-border-radius: 5px;
-overflow: hidden;
-background: $light-gray;
-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-// position: relative;
-text-align: center;
-padding: 5vh auto;
-}
+// .category-card {
+// display: block;
+// border-radius: 5px;
+// overflow: hidden;
+// background: $light-gray;
+// box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// // position: relative;
+// text-align: center;
+// padding: 5vh auto;
+// }
 
 // .category-card img {
 // height: 50%;
@@ -40,25 +40,27 @@ padding: 5vh auto;
 // }
 
 .category-text {
-border-radius: 2px;
-background-color: $purple;
-opacity: 0.9;
-height: 10vh;
-// position: absolute;
-// bottom: 0;
-width: 100%;
-padding: 3vh;
+  border-radius: 2px;
+  background-color: #800080;
+  opacity: 0.9;
+  height: 8vh;
+  width: 100%;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .category-text h3 {
-font-size: 18px;
-font-weight: 500;
+font-size: 1.5em;
+font-weight: bolder;
 color: $white;
 text-align: center;
 // margin: auto auto;
 }
 
-.category-text h3 i{
+.category-text h3 i {
 font-size: 20px;
 font-weight: 700;
 color: $white;

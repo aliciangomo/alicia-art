@@ -9,14 +9,14 @@
       </div>
 
       <div class="col-lg-4 col-md-4 col-sm-12 painting-infos">
-        <h2>"<%= @painting.name.capitalize %>"</h2>, <span class="main-text"><%= @painting.year %></span>
+        <h2>"<%= @painting.name.capitalize %>", <span class="main-text"><%= @painting.year %></span></h2>,
         <p class="main-text"><%= humanized_money_with_symbol(@painting.price) %></p>
         <hr>
         <p class="main-text"><strong>Style: </strong><%= @painting.category %></p>
         <p class="main-text"><strong>Measurements:</strong> <%= @painting.height %>cm x <%= @painting.width %>cm</p>
         <p class="main-text"><strong>Description:</strong> <%= @painting.description %></p>
 
-        <%= link_to 'Purchase Painting', new_address_path, { :id => "show-form-button", :class => "nav-link button-primary", 'data-toggle' => 'modal', 'data-target' => '#new-address' } %>
+        <%= link_to 'Purchase this painting', new_address_path, { :id => "show-form-button", :class => "nav-link button-primary", 'data-toggle' => 'modal', 'data-target' => '#new-address' } %>
 
       </div>
       <%= render "addresses/new", painting: @painting %>
