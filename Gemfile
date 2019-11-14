@@ -21,6 +21,10 @@ gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'mini_magick', '~> 4.3'
+gem 'haml', '~> 5.1', '>= 5.1.2'
+gem 'stripe'
+gem 'money-rails'
+gem 'jquery-rails'
 
 # Mail form
 gem 'actionmailer', '~> 5.2.3'

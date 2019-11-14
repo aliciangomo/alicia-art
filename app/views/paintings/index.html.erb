@@ -85,6 +85,7 @@
           <div class="card-painting-infos">
             <div>
               <h3><strong><%= abs_painting.name %></strong> (<%= abs_painting.year %>)</h3>
+              <p><%= humanized_money_with_symbol(abs_painting.price) %></p>
               <p><%= abs_painting.height %>cm x <%= abs_painting.width %>cm.
               <p><%= abs_painting.description.truncate_words(10) %></p>
             </div>
@@ -107,6 +108,7 @@
             <div class="card-painting-infos">
               <div>
                 <h3><strong><%= fig_painting.name %></strong> (<%= fig_painting.year %>)</h3>
+                <p><%= humanized_money_with_symbol(fig_painting.price) %></p>
                 <p><%= fig_painting.height %>cm x <%= fig_painting.width %>cm.
                 <p><%= fig_painting.description.truncate_words(10) %></p>
               </div>
@@ -129,6 +131,7 @@
             <div class="card-painting-infos">
               <div>
                 <h3><strong><%= portrait_painting.name %></strong> (<%= portrait_painting.year %>)</h3>
+                <p><%= humanized_money_with_symbol(portrait_painting.price) %></p>
                 <p><%= portrait_painting.height %>cm x <%= portrait_painting.width %>cm.
                 <p><%= portrait_painting.description.truncate_words(10) %></p>
               </div>
@@ -151,6 +154,7 @@
               <div class="card-painting-infos">
                 <div>
                   <h3><strong><%= other_painting.name %></strong> (<%= other_painting.year %>)</h3>
+                  <p><%= humanized_money_with_symbol(other_painting.price) %></p>
                   <p><%= other_painting.height %>cm x <%= other_painting.width %>cm.
                   <p><%= other_painting.description.truncate_words(10) %></p>
                 </div>

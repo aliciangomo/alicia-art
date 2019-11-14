@@ -2,18 +2,19 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Your message for Alicia</h4>
+        <h4 class="modal-title" id="exampleModalLabel">Type your message for Alicia</h4>
         <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <%= form_tag contacts_path do%>
-          Name: </br><%= text_field_tag 'name', '', class: "form-control" %></br>
-          Email : </br><%= text_field_tag 'email','', class: "form-control" %></br>
-          Message:<%= text_area_tag 'message', '', class: "form-control"%>
+
+          Your name: </br><%= text_field_tag 'name', '', class: "form-control" %></br>
+          Your email : </br><%= text_field_tag 'email','', class: "form-control" %></br>
+          Your message:<%= text_area_tag 'message', '', class: "form-control"%>
           <br>
-          <%= submit_tag "Submit",:value => "Submit", :class => "btn button-primary" %>
+          <%= submit_tag "Submit", :class => "btn button-primary w-100" %>
         <%end%>
       </div>
     </div>

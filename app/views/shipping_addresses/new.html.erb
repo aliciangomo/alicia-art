@@ -1,0 +1,40 @@
+<script>
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+  const modal = document.querySelector('#new-shipping');
+  console.log(modal);
+  modal.classList.add('show');
+  modal.classList.add('modal-new');
+});
+</script>
+
+<div class="modal modal-new fade" id="new-shipping" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Enter your shipping information address</h4>
+        <button type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="billing-details form-group">
+
+           <%= form_for @shipping_address, :url => shipping_addresses_path, method: :post do |f| %>
+              <%= f.hidden_field :painting_id, :value => params[:painting_id] %>
+              <%= f.hidden_field :shipping_address_id, :value => @shipping_address.id %>
+              <%= f.text_field :shipping_address, id: "shipping_address", placeholder: "Full address", class: 'form-control'%><br>
+              <%= f.number_field :shipping_zipcode, id: "shipping_zipcode", placeholder: "Zip code", class: 'form-control'%><br>
+              <%= f.text_field :shipping_city, id: "shipping_city", placeholder: "City", class: 'form-control'%><br>
+              <%= f.text_field :shipping_country, id: "shipping_country", placeholder: "Country", class: 'form-control'%><br>
+              <%= f.text_field :shipping_comments, id: "shipping_comments", placeholder: "Any shipping instructions?", class: 'form-control'%><br>
+              </div>
+
+              <%= f.submit :submit, value: "Save address", id: "submit-address", class: "button-primary" %>
+            <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

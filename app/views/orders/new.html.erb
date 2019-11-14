@@ -1,0 +1,47 @@
+
+<script>
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+  const modal = document.querySelector('#new-order');
+  console.log(modal);
+  modal.classList.add('show');
+  modal.classList.add('modal-new');
+});
+</script>
+
+<div class="modal fade" id="new-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Your purchase summary"</h4>
+        <button type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="order-details">
+          <p>You are buying: </p>
+
+          <div class="painting-order">
+            <%= image_tag @painting.photo, class: "thumbnail" %>
+            <p><strong> "<%= @painting.name %>"</strong></p>
+            <p><%= humanized_money_with_symbol @painting.price %></p>
+          </div>
+
+
+          <%= form_tag painting_orders_path do %>
+          <%= hidden_field_tag 'painting_id', @painting.id %>
+          <%= hidden_field_tag 'shipping_address_id', @shipping_address.id %>
+          <div class="form-group">
+          <%= submit_tag 'Pay', class: 'btn button-primary w-100' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

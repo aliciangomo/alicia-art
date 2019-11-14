@@ -1,0 +1,49 @@
+<div class="modal fade" id="new-address" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Billing address</h4>
+        <button type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="billing-details form-group">
+              <%= form_for @address, :url => addresses_path do |f| %>
+                <%= f.hidden_field :painting_id, :value => @painting.id %>
+                <div class="form-group">
+                <%= f.text_field :first_name, placeholder: "Your name", class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                <%= f.text_field :last_name, placeholder: "Your family name", class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                <%= f.email_field :email, placeholder: "Your email", class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                <%= f.text_field :billing_address, placeholder: "Full address", class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                <%= f.text_field :billing_city, placeholder: "Your city", class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                <%= f.number_field :billing_zipcode, placeholder: "Zip code", class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                <%= f.text_field :billing_country, placeholder: "Country", class: 'form-control'%>
+                </div>
+                <div class="form-inline">
+                <%= f.check_box :different_shipping, as: :boolean, checked_value: true, unchecked_value: false, id: "shipping-checkbox", class: 'form-check-input' %>
+                <%= f.label :different_shipping, "This is also my shipping address", {class: "checkbox inline"} %>
+                </div>
+
+                <%= f.submit :submit, value: "Save address", id: "submit-address", class: "button-primary w-100" %>
+              <% end %>
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

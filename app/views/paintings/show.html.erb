@@ -4,22 +4,22 @@
 <br>
   <div class="row justify-content-center painting-details ">
       <div class="col-lg-8 col-md-8 col-sm-12 painting-carrousel">
-        <%= image_tag @painting.photo%>
+        <%= image_tag @painting.photo %>
         <%#= render 'photocarousel', photos: @painting.photos %>
       </div>
 
       <div class="col-lg-4 col-md-4 col-sm-12 painting-infos">
         <h2>"<%= @painting.name.capitalize %>"</h2>, <span class="main-text"><%= @painting.year %></span>
+        <p class="main-text"><%= humanized_money_with_symbol(@painting.price) %></p>
         <hr>
         <p class="main-text"><strong>Style: </strong><%= @painting.category %></p>
         <p class="main-text"><strong>Measurements:</strong> <%= @painting.height %>cm x <%= @painting.width %>cm</p>
         <p class="main-text"><strong>Description:</strong> <%= @painting.description %></p>
 
-        <%= form_for([@painting]) do |f| %>
-        <%= f.hidden_field :painting_id, value: @painting.id %>
-        <%= f.submit "Add to bag", :id => "show-form-button", :class => "button-primary" %>
-        <% end %>
+        <%= link_to 'Purchase Painting', new_address_path, { :id => "show-form-button", :class => "nav-link button-primary", 'data-toggle' => 'modal', 'data-target' => '#new-address' } %>
+
       </div>
+      <%= render "addresses/new", painting: @painting %>
   </div>
 
 

@@ -13,6 +13,8 @@ class PaintingsController < ApplicationController
     @painting = Painting.find(params[:id])
     # @order_item = current_order.order_items.new
     @review = Review.new
+    @order = Order.new
+    @address = Address.new
   end
 
   private
