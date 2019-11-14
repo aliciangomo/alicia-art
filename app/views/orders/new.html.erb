@@ -14,8 +14,8 @@ window.addEventListener('load', (event) => {
     <div class="modal-content">
 
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Your purchase summary"</h4>
-        <button type="button" class="close button-primary" data-dismiss="modal" aria-label="Close">
+        <h4 class="modal-title purple-title" id="exampleModalLabel">Review your order</h4>
+        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -23,19 +23,21 @@ window.addEventListener('load', (event) => {
       <div class="modal-body">
         <div class="order-details">
           <p>You are buying: </p>
+          <hr>
 
           <div class="painting-order">
             <%= image_tag @painting.photo, class: "thumbnail" %>
             <p><strong> "<%= @painting.name %>"</strong></p>
             <p><%= humanized_money_with_symbol @painting.price %></p>
           </div>
+          <hr>
 
 
           <%= form_tag painting_orders_path do %>
           <%= hidden_field_tag 'painting_id', @painting.id %>
           <%= hidden_field_tag 'shipping_address_id', @shipping_address.id %>
           <div class="form-group">
-          <%= submit_tag 'Pay', class: 'btn button-primary w-100' %>
+          <%= submit_tag 'Pay', class: 'btn button-primary w-100', id: "submit-btn" %>
           </div>
           <% end %>
         </div>

@@ -20,22 +20,22 @@ class OrdersController < ApplicationController
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
-        name: @painting.name,
-        images: @painting.photo,
+        name: "Your painting '#{@painting.name}' by Alicia Ngomo",
+        description: 'More art on www.aliciangomo-art.com',
         amount: @painting.price_cents,
         currency: 'gbp',
         quantity: 1
       }],
-      success_url: root_path,
-      cancel_url: root_path
+      success_url: root_url(@order),
+      cancel_url: root_url(@order)
     )
 
-    order.update(checkout_session_id: session.id)
-    redirect_to new_painting_order_payment_path(@order)
+    @order.update(checkout_session_id: session.id)
+    redirect_to new_painting_order_payment_path(order_id: @order.id)
   end
 
   def show
-    @painting = Painting.find(params[:painting_id])
+    @order = current_user.orders.find(params[:id])
   end
 
   private

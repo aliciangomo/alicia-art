@@ -3,14 +3,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel">Add a comment for <%= painting.name %></h4>
-        <button type="button" class="close-button" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close-button close-btn" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <%= simple_form_for([ painting, review ]) do |form| %>
           <%= form.input :content, as: :text, placeholder: "Enter your comment"%>
-          <%= form.button :submit, value: "Submit comment", class: "button-primary" %>
+          <%= form.button :submit, value: "Submit comment", class: "button-primary", id: "submit-btn" %>
         <% end %>
       </div>
     </div>

@@ -1,0 +1,51 @@
+<script>
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+  const modal = document.querySelector('#new-order');
+  console.log(modal);
+  modal.classList.add('show');
+  modal.classList.add('modal-new');
+});
+</script>
+
+
+<div class="modal fade" id="new-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title purple-title" id="exampleModalLabel">Pay for your painting</h4>
+        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="container">
+          <div class="row py-4">
+            <div class="col-md-3"><%= image_tag @order.painting.photo, width: '100%' %></div>
+            <div class="col">
+              <p class="grey-title">Checkout summary</p>
+              <p>Purchase of <strong>"<%= @order.painting.name %>"</strong>, by Alicia Ngomo, for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+
+            </div>
+          </div>
+          <div class="row py-4">
+              <button id="pay" class="btn submit-btn">Pay <%= humanized_money_with_symbol @order.amount %></button>
+              <script src="https://js.stripe.com/v3/"></script>
+              <script>
+                const paymentButton = document.getElementById('pay');
+                paymentButton.addEventListener('click', () => {
+                  const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+                  stripe.redirectToCheckout({
+                    sessionId: '<%= @order.checkout_session_id %>'
+                  });
+                });
+              </script>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
