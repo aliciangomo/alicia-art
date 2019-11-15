@@ -40,20 +40,20 @@
 // }
 
 .category-text {
-  border-radius: 2px;
+  // border-radius: 2px;
   background-color: #800080;
   opacity: 0.9;
   height: 8vh;
   width: 100%;
   padding: 2vh;
   display: flex;
-  align-items: center;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  align-items: baseline;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .category-text h3 {
-font-size: 1.5em;
+font-size: 1.7em;
 font-weight: bolder;
 color: $white;
 text-align: center;
@@ -61,7 +61,7 @@ text-align: center;
 }
 
 .category-text h3 i {
-font-size: 20px;
+font-size: 1.7em;
 font-weight: 700;
 color: $white;
 text-align: center;

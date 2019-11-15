@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_one :address
   has_many :shippingaddresses
   has_many :orders
+  validates :email
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

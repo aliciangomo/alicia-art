@@ -25,6 +25,7 @@ gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'stripe'
 gem 'money-rails'
 gem 'jquery-rails'
+gem "bootstrap_form", "~> 4.0"
 
 # Mail form
 gem 'actionmailer', '~> 5.2.3'
