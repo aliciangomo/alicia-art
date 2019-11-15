@@ -75,7 +75,7 @@ painting6 = Painting.new(name: "Purple sunset",
   width: 30,
   category: 'Other',
   material: "Oil and acrylic on cardboard",
-  photo: "Purple-sunset-2011")
+  photo: "Purple-sunset-2011.jpg")
 painting6.save!
 
 painting7 = Painting.new(name: "Ends of beginnings and beginnings of ends",
