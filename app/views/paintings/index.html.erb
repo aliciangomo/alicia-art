@@ -18,34 +18,6 @@
 
 <div class="category-cards">
 
-  <!-- <div class="category-card abstractcat">
-      <%#= image_tag ("Forever-now-2015.jpg")%>
-      <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Abstract</h3>
-      </div>
-  </div>
-
-  <div class="category-card figurativecat">
-      <%#= image_tag ("Father-and-son-2017.jpg")%>
-      <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Figurative</h3>
-      </div>
-  </div>
-
-  <div class="category-card portraitcat">
-      <%#= image_tag ("Alex-2014.jpg")%>
-      <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Portrait</h3>
-      </div>
-  </div>
-
-  <div class="category-card othercat">
-      <%#= image_tag ("Break-of-dawn-2017.jpg")%>
-      <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Other</h3>
-      </div>
-  </div> -->
-
   <div class=" abstractcat">
       <div class="category-text">
         <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Abstract</h3>
@@ -74,8 +46,31 @@
 
 <div class="paintings">
 
+  <div class="all-paintings">
+     <% if @paintings %>
+        <% @paintings.each do |painting| %>
+         <%= link_to painting_path(painting) do %>
+          <div class="card-painting">
+            <%#= image_tag("Alex-2014.jpg") %>
+            <%= image_tag painting.photo, crop: :fill%>
+            <div class="card-painting-infos">
+              <div>
+                <h3><strong><%= painting.name %></strong> (<%= painting.year %>)</h3>
+                <p><%= humanized_money_with_symbol(painting.price) %></p>
+                <p><%= painting.height %>cm x <%= painting.width %>cm.
+                <p><%= painting.description.truncate_words(10) %></p>
+              </div>
+            <!--   <h2 class="card-painting-pricing"><%#= abs_painting.price %></h2> -->
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
 
-  <div class="abstract-paintings">
+
+
+  <div class="abstract-paintings d-none">
    <% if @paintings_abstract %>
       <% @paintings_abstract.each do |abs_painting| %>
        <%= link_to painting_path(abs_painting) do %>
@@ -98,7 +93,7 @@
   </div>
 
 
-  <div class="figurative-paintings">
+  <div class="figurative-paintings d-none">
     <% if @paintings_figurative %>
       <% @paintings_figurative.each do |fig_painting| %>
         <%= link_to painting_path(fig_painting) do %>
@@ -121,7 +116,7 @@
   </div>
 
 
-  <div class="portrait-paintings">
+  <div class="portrait-paintings d-none">
     <% if @paintings_portrait %>
       <% @paintings_portrait.each do |portrait_painting| %>
         <%= link_to painting_path(portrait_painting) do %>
@@ -144,7 +139,7 @@
   </div>
 
 
-  <div class="other-paintings">
+  <div class="other-paintings d-none">
     <% if @paintings_other %>
       <% @paintings_other.each do |other_painting| %>
         <%= link_to painting_path(other_painting) do %>
