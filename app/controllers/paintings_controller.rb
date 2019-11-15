@@ -2,6 +2,7 @@ class PaintingsController < ApplicationController
   # skip_before_action :authenticate_user!
 
   def index
+    @paintings = Painting.all
     @paintings_abstract = Painting.all.where("category = ?", "Abstract")
     @paintings_figurative = Painting.all.where("category = ?", "Figurative")
     @paintings_portrait = Painting.all.where("category = ?", "Portrait")
