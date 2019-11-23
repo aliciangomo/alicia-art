@@ -4,34 +4,7 @@ const toggleCollapsible = () => {
   const figurativePaintings = document.querySelector('.figurative-paintings');
   const portraitPaintings = document.querySelector('.portrait-paintings');
   const otherPaintings = document.querySelector('.other-paintings');
-  const allPaintings = document.querySelector('.all-paintings')
-
-  // if (abstractPaintings) {
-  //   abstractPaintings.classList.add('d-none');
-
-  //   const abstractCat = document.querySelector('.abstractcat');
-  //   abstractCat.addEventListener("click", (event) => {
-  //     abstractPaintings.classList.toggle('d-none');
-  //   });
-  // }
-
-  // if (figurativePaintings) {
-  //   figurativePaintings.classList.add('d-none');
-
-  //   const figurativeCat = document.querySelector('.figurativecat');
-  //   figurativeCat.addEventListener("click", (event) => {
-  //     figurativePaintings.classList.toggle('d-none');
-  //   });
-  // }
-
-  // if (otherPaintings) {
-  //   otherPaintings.classList.add('d-none');
-
-  //   const otherCat = document.querySelector('.othercat');
-  //   otherCat.addEventListener("click", (event) => {
-  //     otherPaintings.classList.toggle('d-none');
-  //   });
-  // }
+  const allPaintings = document.querySelector('.all-paintings');
 
   const abstractCat = document.querySelector('.abstractcat');
   const figurativeCat = document.querySelector('.figurativecat');

@@ -1,4 +1,6 @@
 // Specific CSS for your home-page
+
+// FONTS
 .main-subtitle {
   font-size: 32px;
   color: $purple;
@@ -6,6 +8,12 @@
   text-align: center;
 }
 
+.main-subtitle-white {
+  font-size: 32px;
+  color: $white;
+  font-weight: bold;
+  text-align: center;
+}
 
 .main-text {
   color: $dark-gray;
@@ -13,12 +21,25 @@
   text-align: left;
 }
 
+.main-text-white {
+  color: $white;
+  font-size: 18px;
+  text-align: left;
+}
+
+.small-text {
+  color: $white;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+
+//ABOUT SECTION
 
 .index-intro {
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
-
 
 .artist-statement {
   margin-top: 57px;
@@ -26,12 +47,7 @@
 
 }
 
-
 .about-me {
-  // height: 50vh;
-  // display: flex;
-  // justify-content: space-between;
-  // align-tems: center;
   margin: 7vh 5vw;
 }
 
@@ -77,11 +93,14 @@
   min-height: 200px;
 }
 
+// CONTACT SECTION
 
 .contact {
   margin-top: 5vh;
   text-align: center;
   min-height: 200px;
+  padding: 7vh 5vw;
+  background-image: linear-gradient( #005, $purple);
 }
 
 .button-contact {
@@ -94,10 +113,20 @@
   justify-content: center;
 }
 
-.button-contact a :hover :active{
-  background-color: $purple;
+.alt-contact a {
   color: $white;
+  text-decoration: underline;
 }
+
+.alt-contact a:hover {
+  color: $white;
+  font-weight: 700;
+  font-size: 18PX;
+  text-decoration: underline;
+}
+
+
+// PRIVACY POLICY PAGES
 
 .main-container {
   margin: 5vw 7vh;

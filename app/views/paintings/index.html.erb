@@ -15,33 +15,34 @@
   </p>
 </div>
 
-
+<div class="categories">
 <div class="category-cards">
 
   <div class=" abstractcat">
       <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Abstract</h3>
+        <h3> ABSTRACT</h3>
       </div>
   </div>
 
   <div class=" figurativecat">
       <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Figurative</h3>
+        <h3>FIGURATIVE</h3>
       </div>
   </div>
 
   <div class=" portraitcat">
       <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Portrait</h3>
+        <h3>PORTRAIT</h3>
       </div>
   </div>
 
   <div class=" othercat">
       <div class="category-text">
-        <h3><i class="fa fa-angle-double-right" aria-hidden="true"></i> Other</h3>
+        <h3>OTHER</h3>
       </div>
   </div>
 
+</div>
 </div>
 
 <div class="paintings">
@@ -54,12 +55,11 @@
             <%#= image_tag("Alex-2014.jpg") %>
             <%= image_tag painting.photo, crop: :fill%>
             <div class="card-painting-infos">
-              <div>
+
                 <h3><strong><%= painting.name %></strong> (<%= painting.year %>)</h3>
                 <p><%= humanized_money_with_symbol(painting.price) %></p>
                 <p><%= painting.height %>cm x <%= painting.width %>cm.
                 <p><%= painting.description.truncate_words(10) %></p>
-              </div>
             <!--   <h2 class="card-painting-pricing"><%#= abs_painting.price %></h2> -->
             </div>
           </div>
@@ -78,12 +78,12 @@
           <%#= image_tag("Alex-2014.jpg") %>
           <%= image_tag abs_painting.photo, crop: :fill%>
           <div class="card-painting-infos">
-            <div>
+
               <h3><strong><%= abs_painting.name %></strong> (<%= abs_painting.year %>)</h3>
               <p><%= humanized_money_with_symbol(abs_painting.price) %></p>
               <p><%= abs_painting.height %>cm x <%= abs_painting.width %>cm.
               <p><%= abs_painting.description.truncate_words(10) %></p>
-            </div>
+
           <!--   <h2 class="card-painting-pricing"><%#= abs_painting.price %></h2> -->
           </div>
         </div>
@@ -101,12 +101,12 @@
             <%#= image_tag("Alex-2014.jpg") %>
             <%= image_tag fig_painting.photo, crop: :fill %>
             <div class="card-painting-infos">
-              <div>
+
                 <h3><strong><%= fig_painting.name %></strong> (<%= fig_painting.year %>)</h3>
                 <p><%= humanized_money_with_symbol(fig_painting.price) %></p>
                 <p><%= fig_painting.height %>cm x <%= fig_painting.width %>cm.
                 <p><%= fig_painting.description.truncate_words(10) %></p>
-              </div>
+
               <!-- <h2 class="card-painting-pricing"><%= fig_painting.price %></h2> -->
             </div>
           </div>
@@ -124,12 +124,12 @@
             <%#= image_tag("Alex-2014.jpg") %>
             <%= image_tag portrait_painting.photo, crop: :fill %>
             <div class="card-painting-infos">
-              <div>
+
                 <h3><strong><%= portrait_painting.name %></strong> (<%= portrait_painting.year %>)</h3>
                 <p><%= humanized_money_with_symbol(portrait_painting.price) %></p>
                 <p><%= portrait_painting.height %>cm x <%= portrait_painting.width %>cm.
                 <p><%= portrait_painting.description.truncate_words(10) %></p>
-              </div>
+
               <!-- <h2 class="card-painting-pricing"><%= portrait_painting.price %></h2> -->
             </div>
           </div>
@@ -147,12 +147,12 @@
               <%#= image_tag("Alex-2014.jpg") %>
               <%= image_tag other_painting.photo, crop: :fill %>
               <div class="card-painting-infos">
-                <div>
+
                   <h3><strong><%= other_painting.name %></strong> (<%= other_painting.year %>)</h3>
                   <p><%= humanized_money_with_symbol(other_painting.price) %></p>
                   <p><%= other_painting.height %>cm x <%= other_painting.width %>cm.
                   <p><%= other_painting.description.truncate_words(10) %></p>
-                </div>
+
                 <!-- <h2 class="card-painting-pricing"><%= other_painting.price %></h2> -->
               </div>
             </div>

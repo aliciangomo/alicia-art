@@ -1,3 +1,9 @@
+.paintings {
+  background-color: #004;
+  padding-top: 7vh;
+  padding-bottom: 5vh;
+}
+
 .all-paintings {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -6,7 +12,6 @@
   margin-left: 5vw;
   // height: 55vh;
   margin-bottom: 10vh;
-  margin-top: 10vh;
 }
 
   @media (max-width: 768px) {
@@ -29,7 +34,6 @@
   margin-left: 5vw;
   // height: 55vh;
   margin-bottom: 10vh;
-  margin-top: 10vh;
 }
 
   @media (max-width: 768px) {
@@ -52,7 +56,6 @@
   margin-left: 5vw;
   // height: 55vh;
   margin-bottom: 10vh;
-  margin-top: 10vh;
 }
 
   @media (max-width: 768px) {
@@ -75,7 +78,6 @@
   margin-left: 5vw;
   // height: 55vh;
   margin-bottom: 10vh;
-  margin-top: 10vh;
 }
 
   @media (max-width: 768px) {
@@ -99,7 +101,6 @@
   margin-left: 5vw;
   // height: 55vh;
   margin-bottom: 10vh;
-  margin-top: 10vh;
 }
 
   @media (max-width: 768px) {
@@ -116,33 +117,38 @@
 
 .card-painting {
   display:block;
-  border-radius: 0px;
   overflow: hidden;
-  background: $light-gray;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-align: center;
-  height: 50vh;
+  height: 60vh;
+  background-color: #004;
   position: relative;
+  // border: 0.5px gray solid;
+  justify-content: center;
 
   // padding: 0vh auto;
   // max-height: 50vh;
 }
 
-.card-painting .card-painting-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.card-painting-infos {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-top: 2vh;
+  margin: 0 auto;
+  height: 18vh;
   position: absolute;
-  background-color: $light-gray;
   bottom: 0;
+  background-color: #004;
 }
 
 .card-painting img {
-  object-fit: cover;
+  object-fit: fill;
   max-width: 100%;
-  height: 40vh;
-  margin: 0vh auto;
+  min-height: 42vh;
+  margin: 0 auto;
+  border: 0.5px $light-gray solid;
+
 }
 
 .card-painting h3 {
@@ -151,16 +157,14 @@
   margin: 0;
   text-align: left;
   // padding-right: 1vw;
-  color: $dark-gray;
+  color: $white;
 }
 
 .card-painting p {
   font-size: 12px;
-  opacity: .7;
   margin: 0;
   text-align: left;
-  padding-right: 1vw;
-  color: $dark-gray;
+  color: $white;
 }
 
 
@@ -169,7 +173,7 @@ h2.card-painting-pricing {
   padding: 0px;
   font-size: 20px;
   font-weight: bold;
-  color: $dark-gray;
+  color: $white;
 }
 
 .index-intro {

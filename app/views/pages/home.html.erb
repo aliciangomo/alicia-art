@@ -7,7 +7,7 @@
 
 <div class="artist-statement">
   <div class="about-me">
-  <h2 class="main-subtitle"> About me</h2>
+    <h2 class="main-subtitle"> About me</h2>
       <br>
       <p class="main-text">I started painting at a moment in my life where I needed to channel strong emotions.</p>
       <br>
@@ -28,7 +28,7 @@
 
   <div class="about-me">
       <br>
-  <h2 class="main-subtitle"> My inspiration </h2>
+    <h2 class="main-subtitle"> My inspiration </h2>
       <br>
       <p class="main-text"> <span id="love">LOVE</span> ♥️... Emotions are the start of each of my paintings. Love in particular, which I believe is the most powerful feeling. Or the pain of its loss, which is equally powerful. My creative process always starts with a strong feeling. Sometimes my own, other times an emotion conveyed by what I see and hear. Stories from other people, photos or dreams are sources of inspiration. I have awaken in the middle of the might to sketch a painting I dreamed about, or been inspired by the expression of somebody sitting in front of me in the tube.</p>
       <br>
@@ -50,17 +50,21 @@
 
 </div>
 
-<div class="contact about-me">
-  <h2 class="main-subtitle"> Contact me </h2>
+<div class="contact ">
+  <h2 class="main-subtitle-white"> Contact me </h2>
   <br>
-  <p class="main-text">Thanks for stopping by and I sincerely hope you enjoy my work :) </p>
-  <p class="main-text">
+  <p class="main-text-white">Thanks for stopping by and I sincerely hope you enjoy my work :) </p>
+  <p class="main-text-white">
     Please send me a message if interested in a commission or if you have any questions about my art!
   </p>
   <br>
   <div id="button-contact">
-  <%= link_to 'Get in touch!', new_contact_path, { :class => "button-primary button-contact nav-link", 'data-toggle' => 'modal', 'data-target' => '#contact-modal'} %>
+  <%= link_to ('<p>Get in touch!<span class="emoji">&nbsp&#128522<span></p>').html_safe, new_contact_path, { :class => "button-white button-contact nav-link", 'data-toggle' => 'modal', 'data-target' => '#contact-modal'} %>
   </div>
+  <div class="alt-contact">
+    <p class="small-text">(Or alternatively <a href="mailto:alithiaspaintings@gmail.com?Subject=Painting%20inquiry" target="_top">send me an email)</a></p>
+  </div>
+  <%= render "contacts/new" %>
 </div>
 
-<%= render "contacts/new" %>
+
