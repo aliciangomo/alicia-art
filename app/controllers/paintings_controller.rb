@@ -7,7 +7,6 @@ class PaintingsController < ApplicationController
     @paintings_figurative = Painting.all.where("category = ?", "Figurative")
     @paintings_portrait = Painting.all.where("category = ?", "Portrait")
     @paintings_other = Painting.all.where("category = ?", "Other")
-    @paintings = Painting.all
   end
 
   def show
