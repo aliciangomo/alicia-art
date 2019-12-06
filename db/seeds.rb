@@ -40,7 +40,7 @@ painting3 = Painting.new(name: "Irene and baby",
   price: 70000,
   height: 60,
   width: 60,
-  category: 'Other',
+  category: 'Portrait',
   material: "oil",
   photo: "Irene-and-valerio-2014.jpg")
 painting3.save!
@@ -73,7 +73,7 @@ painting6 = Painting.new(name: "Purple sunset",
   price: 12000,
   height: 20,
   width: 30,
-  category: 'Other',
+  category: 'Figurative',
   material: "Oil and acrylic on cardboard",
   photo: "Purple-sunset-2011.jpg")
 painting6.save!
@@ -420,7 +420,7 @@ painting34 = Painting.new(name: "The red lamp",
   price: 120000,
   height: 80,
   width: 50,
-  category: 'Other',
+  category: 'Portrait',
   material: "Oil on canvas",
   photo: "The-red-lamp-2011.jpg")
 painting34.save!
@@ -431,7 +431,7 @@ painting35 = Painting.new(name: "Hold me in your arms",
   price: 45000,
   height: 40,
   width: 50,
-  category: 'Other',
+  category: 'Figurative',
   material: "Acrylic on canvas",
   photo: "Hold-me-in-your-arms-2011.jpg")
 painting35.save!
@@ -442,7 +442,7 @@ painting36 = Painting.new(name: "The secret",
   price: 1000,
   height: 40,
   width: 50,
-  category: 'Other',
+  category: 'Figurative',
   material: "Oil on canvas with paletter knife",
   photo: "The-secret-2011.jpg")
 painting36.save!
@@ -464,7 +464,7 @@ painting38 = Painting.new(name: "El abrazo",
   price: 40000,
   height: 40,
   width: 50,
-  category: 'Other',
+  category: 'Portrait',
   material: "Acrylic and oil on canvas",
   photo: "El-abrazo-2007.jpg")
 painting38.save!
@@ -475,7 +475,7 @@ painting39 = Painting.new(name: "Missing you",
   price: 35000,
   height: 30,
   width: 40,
-  category: 'Portrait',
+  category: 'Figurative',
   material: "Acrylic and texture on canvas.",
   photo: "Missing-you-2012.jpg")
 painting39.save!
@@ -497,7 +497,7 @@ painting41 = Painting.new(name: "Broken",
   price: 75000,
   height: 80,
   width: 50,
-  category: 'Other',
+  category: 'Portrait',
   material: "Oil on canvas",
   photo: "Broken-2011.jpg")
 painting41.save!
@@ -521,7 +521,7 @@ painting43 = Painting.new(name: "You",
   price: 1000,
   height: 100,
   width: 80,
-  category: 'Portrait',
+  category: 'Figurative',
   material: "Mixed media on canvas",
   photo: "You-2013.jpg")
 painting43.save!
@@ -543,7 +543,7 @@ painting45 = Painting.new(name: "Break of dawn",
   price: 25000,
   height: 30,
   width: 30,
-  category: 'Other',
+  category: 'Portrait',
   material: "Acrylic on canvas paper",
   photo: "Break-of-dawn-2017.jpg")
 painting45.save!
