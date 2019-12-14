@@ -17,7 +17,7 @@ class AddressesController < ApplicationController
   private
 
   def address_params
-    params.require(:address).permit(:billing_address, :billing_country, :billing_zipcode, :billing_city, :different_shipping)
+    params.require(:address).permit(:first_name, :last_name, :email, :billing_address, :billing_country, :billing_zipcode, :billing_city, :different_shipping)
   end
 end
 
