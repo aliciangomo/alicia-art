@@ -19,7 +19,7 @@ gem 'webpacker'
 # MYGEMS
 
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.3'
 gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'stripe'
